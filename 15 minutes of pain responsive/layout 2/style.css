@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+/*Ignore the border when calculating the width. The asterisk mean select all*/
+
+header, footer {
+    height: 80px;
+    border: 3px solid black;
+    clear: both;
+    /* clear: both; tells the footer to ingnore the stuff that are floating */
+    background-color: rgb(103, 221, 103);
+}
+
+section {
+    height: 200px;
+    border: 3px solid black;
+    background: orange;
+}
+
+.btm {
+    height: 200px;
+    width: 50%;
+    border: 3px solid black;
+    background: pink;
+    float: left;
+}
+
+@media (max-width: 800px) {
+    header, section, .btm, footer {
+        background-color: red
+    }
+}

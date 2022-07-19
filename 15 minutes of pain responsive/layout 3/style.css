@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+/*Ignore the border when calculating the width. The asterisk mean select all*/
+
+header, footer{
+    height: 100px;
+    border: 3px solid black;
+    clear: both;
+    /* clear: both; tells the footer to ingnore the stuff that are floating */
+    background: orangered;
+}
+
+#sec1 {
+    width: 20%;
+    height: 400px;
+    float: left;
+    border: 3px solid black;
+    background: brown;
+}
+
+#sec2 {
+    width: 40%;
+    height: 400px;
+    float: left;
+    border: 3px solid black;
+    background: brown;
+}
+
+#sec3 {
+    width: 20%;
+    height: 400px;
+    float: left;
+    border: 3px solid black;
+    background: brown;
+}
+
+#sec4 {
+    width: 20%;
+    height: 400px;
+    float: left;
+    border: 3px solid black;
+    background: brown;
+}
+
+@media (max-width: 600px) {
+    header, #sec1, #sec2, #sec3, #sec4, footer {
+        background-color: green;
+    }
+}
