@@ -1,0 +1,1156 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/********************** HEADER *****************************/
+
+header {
+  height: 80px;
+  width: 100vw;
+  font-family: "Mulish";
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+  width: 100px;
+  float: left;
+  margin-left: 10%;
+  position: relative;
+}
+
+.logo img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header nav {
+  height: 80px;
+  width: 50%;
+  display: block;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+header ul {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header li {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 31px;
+  text-transform: uppercase;
+}
+
+header li:last-child {
+  margin-right: 0;
+}
+
+header li:hover {
+  cursor: pointer;
+}
+
+header ul img {
+  display: inline-block;
+  width: 20px;
+}
+
+header .book-online {
+  height: 80px;
+  display: inline-block;
+  float: right;
+  margin-right: 10%;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 80px;
+  line-height: 80px;
+  white-space: nowrap;
+}
+
+.book-online:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 80px;
+    width: 100vw;
+  }
+
+  .logo {
+    width: 70px;
+    margin-left: 5%;
+  }
+
+  header nav {
+    height: 80px;
+    width: 70%;
+    display: block;
+    position: relative;
+    position: absolute;
+    right: 50%;
+    transform: translatex(-50%);
+    margin-left: 60px;
+    margin-top: 5px;
+  }
+
+  header ul {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  header li {
+    font-size: 0.8rem;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  header li:nth-child(1) {
+    display: none;
+  }
+
+  header li:nth-child(6) {
+    margin-right: 0;
+  }
+
+  header li:nth-child(5) {
+    display: none;
+  }
+
+  header li:nth-child(7) {
+    display: none;
+  }
+  header li:nth-child(8) {
+    display: none;
+  }
+
+  header ul img {
+    display: none;
+  }
+
+  header .book-online {
+    display: none;
+  }
+}
+
+/********************** HERO *****************************/
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  padding-top: 100px;
+  padding-left: 150px;
+  position: relative;
+  overflow: visible;
+  clip-path: ellipse(300% 100% at 205% 0%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url(../img/hero.jpg);
+  opacity: 1;
+  background-size: cover;
+}
+
+.hero-top {
+  display: inline-block;
+  width: fit-content;
+}
+
+.hero-top h1 {
+  font-family: "Cinzel";
+  font-weight: 400;
+  font-size: 5.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-top h1 span {
+  display: block;
+}
+
+.hero-top p {
+  font-family: "Cinzel";
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-top div {
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: black;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.hero-top div span {
+  font-weight: 900;
+  width: fit-content;
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: text-top;
+}
+
+@media (max-width: 500px) {
+  .hero {
+    height: 90vh;
+    background-image: none;
+    background-size: cover;
+    background-position: -500px;
+    padding-top: 50px;
+    padding-left: 50px;
+    position: relative;
+    overflow: visible;
+    clip-path: none;
+    isolation: isolate;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url(../img/hero.jpg);
+    opacity: 0.4;
+    background-size: cover;
+    background-position: -400px;
+  }
+
+  .hero-top {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .hero-top h1 {
+    width: 80%;
+    color: black;
+    font-family: "Cinzel";
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 30px;
+    line-height: 4rem;
+  }
+
+  .hero-top h1 span {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .hero-top p {
+    color: black;
+    width: 70%;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 2rem;
+  }
+
+  .hero-top div {
+    font-family: "Mulish";
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 15px 20px;
+    display: inline-block;
+  }
+
+  .hero-top div span {
+    font-weight: 900;
+    width: fit-content;
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: text-top;
+  }
+}
+/********************** SECOND SECTION *****************************/
+
+.second-sec {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+}
+
+.icon-container {
+  width: 80vw;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+}
+
+.icon-sec-1,
+.icon-sec-2,
+.icon-sec-3 {
+  float: left;
+  width: 30%;
+  height: 300px;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.icon-sec-3 {
+  margin-right: 0px;
+}
+
+.second-sec img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.second-sec span {
+  font-family: "Cinzel";
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.second-sec p {
+  font-family: "Mulish";
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  display: block;
+  text-align: center;
+}
+
+.hero-bottom {
+  position: absolute;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  left: 150px;
+  top: -210px;
+  padding: 60px 30px;
+  width: 18.5%;
+}
+
+.hero-bottom p {
+  font-family: "Cinzel";
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.hero-bottom p + p {
+  font-family: "Cinzel";
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.hero-bottom div {
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+  .second-sec {
+    height: 120vh;
+  }
+
+  .icon-container {
+    width: 60vw;
+    margin-top: 20px;
+  }
+
+  .icon-sec-1,
+  .icon-sec-2,
+  .icon-sec-3 {
+    float: none;
+    width: 100%;
+    height: 220px;
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .hero-bottom {
+    left: 50px;
+    top: -208px;
+    padding: 30px 25px;
+    width: 50%;
+  }
+
+  .hero-bottom p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-bottom p + p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-bottom: 10px;
+  }
+}
+
+/********************** THIRD SECTION *****************************/
+
+.third-sec {
+  height: 500px;
+  position: relative;
+  background-color: #f3f4f6;
+}
+
+.third-sec > div {
+  width: 70vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.third-sec-left {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  padding: 20px;
+}
+
+.third-sec-left h3 {
+  font-family: "Cinzel";
+  font-size: 2.5rem;
+  margin: 20px;
+}
+
+.third-sec-left h3 span {
+  display: block;
+}
+
+.third-sec-left p {
+  font-family: "Mulish";
+  line-height: 1.4rem;
+  margin: 20px;
+}
+
+.third-sec-left div {
+  background-color: black;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 20px;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+}
+
+.third-sec-img {
+  width: 50%;
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+
+.third-sec-img img {
+  width: 100%;
+  margin-top: 8vh;
+}
+
+@media (max-width: 500px) {
+  .third-sec {
+    height: 100vh;
+  }
+
+  .third-sec > div {
+    width: 80vw;
+  }
+
+  .third-sec-left {
+    width: 100%;
+    display: block;
+    float: none;
+    padding: 0px;
+  }
+
+  .third-sec-left h3 {
+    font-family: "Cinzel";
+    font-size: 1.6rem;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+
+  .third-sec-left h3 span {
+    display: inline;
+  }
+
+  .third-sec-left p {
+    line-height: 1.5rem;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+
+  .third-sec-left div {
+    margin: 0px;
+  }
+
+  .third-sec-img {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+  .third-sec-img img {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+/********************** FOURTH SECTION *****************************/
+
+.fourth-sec {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+}
+
+.fourth-sec h3 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Cinzel";
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.coff-collage {
+  width: 70%;
+  height: 400px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0px;
+}
+
+.coff {
+  height: 400px;
+  width: 30%;
+  float: left;
+}
+
+.coff-1 {
+  background-image: url(../img/hairstylist-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 47px;
+  position: relative;
+}
+
+.coff div {
+  background: black;
+  color: white;
+  position: absolute;
+  width: 60%;
+  height: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  padding: 15px 10px;
+}
+
+.coff div .name {
+  font-family: "Cinzel";
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.coff div .post {
+  display: block;
+  font-family: "Cinzel";
+  text-align: center;
+}
+
+.coff-2 {
+  background-image: url(../img/hairstylist-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 47px;
+  position: relative;
+}
+
+.coff-3 {
+  background-image: url(../img/hairstylist-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .fourth-sec {
+    height: 230vh;
+  }
+
+  .fourth-sec h3 {
+    font-size: 2rem;
+    padding-top: 30px;
+  }
+
+  .coff-collage {
+    width: 70%;
+    height: fit-content;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .coff {
+    height: 400px;
+    width: 100%;
+    float: none;
+    margin-bottom: 50px;
+  }
+
+  .coff-1 {
+    margin-right: 0px;
+  }
+
+  .coff-2 {
+    margin-right: 0px;
+  }
+
+  .coff-3 {
+    position: relative;
+  }
+}
+
+/********************** FIFTH SECTION *****************************/
+
+.fifth-sec {
+  height: 75vh;
+  position: relative;
+}
+
+.fifth-sec > div {
+  width: 70%;
+  height: 400px;
+  background-image: url(../img/Promo-Banner-Image.jpg);
+  background-size: cover;
+  padding: 80px 100px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fifth-sec span {
+  display: block;
+  font-family: "Cinzel";
+  margin-bottom: 20px;
+}
+
+.fifth-sec span + span {
+  display: block;
+  font-family: "Cinzel";
+  font-size: 2rem;
+  line-height: 3rem;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.fifth-sec .btn-fifth {
+  display: inline-block;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+}
+
+@media (max-width: 500px) {
+  .fifth-sec {
+    height: 50vh;
+  }
+
+  .fifth-sec > div {
+    width: 90%;
+    height: 200px;
+    padding: 25px 30px;
+  }
+
+  .fifth-sec span {
+    margin-bottom: 10px;
+  }
+
+  .fifth-sec span + span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+/********************** SIXTH SECTION *****************************/
+
+.sixth-sec {
+  height: 150vh;
+  position: relative;
+}
+
+.sixth-sec h3 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Cinzel";
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 30px;
+  color: black;
+}
+
+.lookbook {
+  width: 70%;
+  height: 120vh;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+}
+
+.collage-1 {
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  padding: 10px;
+  background-image: url(../img/Gallery-01.jpg);
+  background-size: cover;
+}
+
+.collage-2 {
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  background-image: url(../img/Masonry-01.jpg);
+  background-size: cover;
+}
+
+.collage-3 {
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  background-image: url(../img/Gallery-02.jpg);
+  background-size: cover;
+}
+
+.collage-4 {
+  float: left;
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  background-image: url(../img/Masonry-02.jpg);
+  background-size: cover;
+}
+
+.collage-5 {
+  float: left;
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  background-image: url(../img/Home1-Service-1-Img.jpg);
+  background-size: cover;
+}
+
+.collage-6 {
+  float: left;
+  width: 33.33%;
+  height: 50%;
+  background-image: url(../img/Masonry-03.jpg);
+}
+
+@media (max-width: 500px) {
+  .sixth-sec {
+    height: 520vh;
+  }
+
+  .sixth-sec h3 {
+    font-size: 2rem;
+    padding-top: 40px;
+  }
+
+  .lookbook {
+    width: 80%;
+    height: fit-content;
+    margin-top: 0px;
+  }
+
+  .collage-1 {
+    float: none;
+    width: 100%;
+    height: 500px;
+    padding: 0px;
+    margin-bottom: 20px;
+    background-position: -100px;
+  }
+
+  .collage-2 {
+    float: none;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .collage-3 {
+    float: none;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .collage-4 {
+    float: none;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .collage-5 {
+    float: none;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .collage-6 {
+    float: none;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+  }
+}
+/********************** FOOTER *****************************/
+
+footer {
+  height: 60vh;
+  color: white;
+  background-color: black;
+  position: relative;
+}
+
+.top-footer {
+  width: 70%;
+  display: block;
+  position: absolute;
+  padding-top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/*********************************/
+
+.about-us {
+  width: 23%;
+  display: block;
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.about-us span {
+  display: block;
+  font-family: "Cinzel";
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.about-us span + span {
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+}
+
+.about-us p {
+  display: block;
+  font-family: "Mulish";
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.about-us img {
+}
+
+/*********************************/
+
+.contact {
+  width: 23%;
+  float: left;
+  margin-right: 20px;
+}
+
+.contact-span {
+  display: block;
+  font-family: "Cinzel";
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.contact img {
+  width: 17px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.line {
+  display: block;
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.day {
+  display: block;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.num {
+  display: block;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.adress {
+  display: block;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.email {
+  display: block;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+/*********************************/
+
+.popular {
+  width: 23%;
+  float: left;
+  margin-right: 20px;
+}
+
+#popular-posts {
+  display: block;
+  font-family: "Cinzel";
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: white;
+  border-bottom: none;
+}
+
+.popular div {
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.popular img {
+  display: inline-block;
+  float: left;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.popular span img {
+  width: 10px;
+  vertical-align: middle;
+}
+
+.popular h4 {
+  display: inline-block;
+  float: left;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.popular span {
+  display: inline;
+  float: left;
+  font-family: "Mulish";
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #737373;
+}
+
+/*********************************/
+
+.our-lookbook {
+  width: 23%;
+  float: left;
+  margin-right: 0;
+}
+
+.our-lookbook > span {
+  display: block;
+  font-family: "Cinzel";
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.our-lookbook div {
+}
+
+.our-lookbook img {
+  display: inline;
+  width: 63px;
+  margin: 3px;
+}
+/*********************************/
+
+.bottom-footer {
+  display: block;
+  height: 10vh;
+  width: 100%;
+  padding: 20px 200px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid gray;
+}
+
+.bottom-footer p {
+  display: inline-block;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+}
+
+.bottom-footer ul {
+  display: inline-block;
+  float: right;
+}
+
+.bottom-footer li {
+  display: inline-block;
+  margin-right: 15px;
+  font-family: "Mulish";
+  font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+  footer {
+    height: 160vh;
+  }
+
+  .top-footer {
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  /*********************************/
+
+  .about-us {
+    width: 60%;
+    display: block;
+    float: none;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  /*********************************/
+
+  .contact {
+    width: 60%;
+    float: none;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  /*********************************/
+
+  .popular {
+    width: 60%;
+    float: none;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  /*********************************/
+
+  .our-lookbook {
+    width: 60%;
+    float: none;
+    margin-right: 0;
+  }
+
+  /*********************************/
+
+  .bottom-footer {
+    display: block;
+    height: 13vh;
+    padding: 15px 30px;
+  }
+
+  .bottom-footer p {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .bottom-footer ul {
+    display: block;
+    float: none;
+  }
+
+  .bottom-footer li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
